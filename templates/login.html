@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Inscription</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" type="text/css">
+</head>
+<body>
+<div id="container">
+<!-- Cover Box -->
+<div id="cover">
+<!-- Sign Up Section -->
+<h1 class="sign-up">Hello, Friend!</h1>
+<p class="sign-up">Enter your personal details<br> and start a journey with us</p>
+<a class="button sign-up" href="#cover">S'inscrire</a>
+<!-- Sign In Section -->
+<h1 class="sign-in">Welcome Back!</h1>
+<p class="sign-in">To keep connected with us please<br> login with your personal info</p>
+<br>
+<a class="button sub sign-in" href="#">Se connecter</a>
+</div>
+<!-- Login Box -->
+<div id="login">
+<h1>Se connecter</h1>
+<a href="#"><img class="social-login" src="https://image.flaticon.com/icons/png/128/59/59439.png"></a>
+<a href="#"><img class="social-login" src="https://image.flaticon.com/icons/png/128/49/49026.png"></a>
+<a href="#"><img class="social-login" src="https://image.flaticon.com/icons/png/128/34/34227.png"></a><br>
+<form>
+<input type="email" style="text-align: center;" placeholder="Adresse email" autocomplete="off"><br>
+<input type="password" style="text-align: center;" placeholder="Mot de passe" autocomplete="off"><br>
+<a id="forgot-pass" href="#">Mots de passe oublié?</a><br>
+<input class="submit-btn" type="submit" value="Se connecter">
+</form>
+</div>
+<!-- Register Box -->
+<div id="register">
+<h1>Créer votre compte</h1>
+<form class="form" method="post" action="{{ url_for('register') }}">
+<label for="txtnbr">Numero de la carte
+    <input type="text" class="form-control" id="txtcarte" name="txtcarte" value={{ newnbr }} readonly>
+</label>
+<input type="text" placeholder="nom" id="txtname" autocomplete="off" required><br>
+<input type="text" placeholder="prénom" id="txtprenom" autocomplete="off" required><br>
+<input type="text" placeholder="date de naissance" id="txtdate" autocomplete="off" required><br>
+<input type="text" placeholder="numéro télephone" id="txtnum" autocomplete="off" required><br>
+<input type="email" placeholder="Email" id="txtmail" autocomplete="off" required><br>
+<input type="password" placeholder="Password" id="txtpass" autocomplete="off" required><br>
+<input class="submit-btn" type="submit" value="S'inscrire">
+<div class="msg">{{ msg }}</div>
+</form>
+</div>
+</div> <!-- END Container -->
+<!-- partial -->
+</body>
+</html>
