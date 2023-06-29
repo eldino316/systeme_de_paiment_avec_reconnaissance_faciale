@@ -37,8 +37,6 @@ Be sure you have the following installed on your development machine:
 
 ## Install Redis Server
 
-[Redis Quick Start](https://redis.io/topics/quickstart)
-
 Run Redis server
 ```bash
 redis-server
@@ -48,15 +46,8 @@ redis-server
 
 To setup a local development environment:
 
-Create a virtual environment in which to install Python pip packages. With [virtualenv](https://pypi.python.org/pypi/virtualenv),
-```bash
-virtualenv venv            # create a virtualenv
-source venv/bin/activate   # activate the Python virtualenv 
-```
-
-or with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/),
-```bash
-mkvirtualenv -p python3 {{project_name}}   # create and activate environment
+Create a virtual environment in which to install Python pip packages. With [vi```bash
+virtualenv venv            # create a vir
 workon {{project_name}}   # reactivate existing environment
 ```
 
@@ -94,8 +85,4 @@ celery -A banking_system worker -l info
 
 celery -A banking_system beat -l info
 ```
-
-## Images:
-![alt text](https://i.imgur.com/FvgmEJL.png)
-#
 ![alt text](https://i.imgur.com/aWzj44Y.png)
